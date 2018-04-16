@@ -15,7 +15,7 @@ public class GUIDemo extends JFrame
     private JPanel panel;
     private JButton biggerButton;
     private JButton smallerButton;
-    private JButton middleScreen;
+    private JButton removeSmaller;
     /**
      * Set up the application.
      */
@@ -28,14 +28,14 @@ public class GUIDemo extends JFrame
         panel = new JPanel();
         biggerButton = new JButton("BIGGER");
         smallerButton = new JButton("SMALLER");
-        middleScreen = new JButton("MIDDLE");        
+        removeSmaller = new JButton("REMOVE");        
         biggerButton.addActionListener(new ButtonHandler());
         smallerButton.addActionListener(new ButtonHandler());
-        middleScreen.addActionListener(new ButtonHandler());        
+        removeSmaller.addActionListener(new ButtonHandler());        
         add(panel);
         panel.add(biggerButton);
         panel.add(smallerButton);
-        panel.add(middleScreen);        
+        panel.add(removeSmaller);        
         setVisible(true);
     }
 
@@ -63,7 +63,7 @@ public class GUIDemo extends JFrame
             }
             else
             {
-                panel.repaint((long).01,400,400,size.width,size.height);        
+                panel.remove(smallerButton);        
             }
 
         }   
