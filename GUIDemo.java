@@ -9,7 +9,7 @@ import javax.swing.*;
  * 
  * @author Nathan Sprague
  * 
- */git 
+ */ 
 public class GUIDemo extends JFrame
 {
     private JPanel panel;
